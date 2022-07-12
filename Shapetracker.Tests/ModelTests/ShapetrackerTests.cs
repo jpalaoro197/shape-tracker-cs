@@ -7,10 +7,10 @@ namespace ShapeTracker.Tests
   public class ShapeTrackerTests
   {
     [TestMethod]
-    public void IsTriangle_AllSidesEqual_True()
+    public void TriangleType_CheckToSeeIfTriangle_NotATriangle()
     {
-      Triangle testTriangle = new Triangle();
-      Assert.AreEqual(true, testTriangle.IsTriangle(4, 4, 4));
+      Triangle testTriangle = new Triangle(1, 2, 8);
+      Assert.AreEqual("not a triangle", testTriangle.TriangleType());
     }
   }
 }  
