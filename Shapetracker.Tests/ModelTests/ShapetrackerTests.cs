@@ -18,5 +18,11 @@ namespace ShapeTracker.Tests
       Triangle testTriangle = new Triangle(1, 1, 1);
       Assert.AreEqual("equilateral", testTriangle.TriangleType());
     }
+    [TestMethod]
+    public void TriangleType_CheckToSeeIfTriangle_IsIsosceles()
+    {
+      Triangle testTriangle = new Triangle(1, 1, 3);
+      Assert.AreEqual("isosceles", testTriangle.TriangleType());
+    }
   }
 }  
